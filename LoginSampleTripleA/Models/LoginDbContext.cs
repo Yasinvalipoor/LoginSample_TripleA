@@ -10,6 +10,4 @@ namespace LoginSampleTripleA.Models
         {
         }
     }
-
-
 }
