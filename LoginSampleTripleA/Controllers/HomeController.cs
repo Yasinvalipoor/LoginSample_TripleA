@@ -13,7 +13,7 @@ namespace LoginSampleTripleA.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult HomeIndex()
         {
             return View();
         }
