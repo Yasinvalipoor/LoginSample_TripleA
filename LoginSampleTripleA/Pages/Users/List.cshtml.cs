@@ -25,7 +25,7 @@ namespace LoginSampleTripleA.Pages.Users
             {
                 await _userManager.DeleteAsync(user);
             }
-            return RedirectToPage("List");
+            return RedirectToPage();
         }
     }
 }
