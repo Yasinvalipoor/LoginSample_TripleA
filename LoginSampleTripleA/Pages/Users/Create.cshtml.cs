@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace LoginSampleTripleA.Pages.Users
 {
-    public class UsersListModel : PageModel
+    public class CreateModel : PageModel
     {
         public void OnGet()
         {
