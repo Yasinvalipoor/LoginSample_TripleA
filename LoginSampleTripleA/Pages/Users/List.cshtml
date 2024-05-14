@@ -2,7 +2,7 @@
 @model LoginSampleTripleA.Pages.Users.ListModel
 @{
 }
-
+<main class="container">
 
 <h2>Users List</h2>
 <hr />
@@ -15,7 +15,7 @@
     @if (Model.Users.Count() < 1)
     {
         <tr>
-            <td colspan="3">No User In DataBase</td>
+            <td colspan="2">No User In DataBase</td>
         </tr>
     }
     else
