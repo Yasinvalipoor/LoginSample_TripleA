@@ -21,7 +21,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(c =>
     //c.Password.RequireLowercase = false;
     //c.Password.RequireDigit = false;
     //------------------
-}).AddEntityFrameworkStores<LoginDbContext>().AddUserValidator<CustomUserValidator>();
+}).AddEntityFrameworkStores<LoginDbContext>();
+//.AddUserValidator<CustomUserValidator>(); // شخصی سازی ایمیل کاربری
 //.AddPasswordValidator<UserNamePasswordValidator>();// شخصی سازی پسوورد - 2  
 
 
