@@ -1,0 +1,32 @@
+﻿@page "{id}"
+@model LoginSampleTripleA.Pages.Users.EditModel
+@{
+}
+
+<h3>Edit User</h3>
+<hr />
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="UserName"></label>
+        <input type="text" class="form-control" asp-for="UserName" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input type="text" class="form-control" asp-for="Password" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input type="text" class="form-control" asp-for="Email" />
+    </div>
+
+    <div class="py-2">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a asp-page="list" class="btn btn-secondary">Back To List Page</a>
+    </div>
+</form>
