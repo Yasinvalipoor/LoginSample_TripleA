@@ -1,4 +1,4 @@
-﻿@page
+﻿ @page
 @model LoginSampleTripleA.Pages.Users.ListModel
 @{
 }
@@ -30,6 +30,10 @@
                 <td>@user.Email</td>
                 <td>
                     <a class="btn btn-primary" asp-page="Edit" asp-route-id="@user.Id">Edit</a>
+                    <form method="post">
+                        <input type="hidden" name="id" value="@user.Id" />
+                        <button type="submit" class="btn btn-danger">Remove</button>
+                    </form>
                 </td>
             </tr>
         }
