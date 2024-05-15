@@ -24,12 +24,13 @@
 <hr />
 
 <h1 class="text-primary">Users Roles</h1>
-<form>
+<form method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <input type="hidden" value="@Model.CurrentUser.Id" name="Id" />
     @foreach(var item in Model.AllRoles)
     {
         <input type="checkbox" name="Roles" checked="@Model.UserRoles.Contains(item.Name)" value="@item.Name" />
+        <label>@item.Name</label>
     }
     <div class="py-2">
         <button type="submit" class="btn btn-primary">Update Roles</button>

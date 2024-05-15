@@ -30,6 +30,7 @@
                 <td>@user.Email</td>
                 <td>
                     <a class="btn btn-primary" asp-page="Edit" asp-route-id="@user.Id">Edit</a>
+                    <a class="btn btn-primary" asp-page="ManageRole" asp-route-id="@user.Id">ManageRole</a>
                     <form method="post">
                         <input type="hidden" name="id" value="@user.Id" />
                         <button type="submit" class="btn btn-danger">Remove</button>
