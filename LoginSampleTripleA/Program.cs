@@ -39,6 +39,8 @@ app.UseStaticFiles();
 
 app.MapRazorPages();
 
+app.UseAuthentication();
+
 app.MapDefaultControllerRoute();
 
 

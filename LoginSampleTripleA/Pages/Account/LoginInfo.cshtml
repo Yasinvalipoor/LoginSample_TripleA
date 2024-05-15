@@ -1,0 +1,25 @@
+﻿@page
+@model LoginSampleTripleA.Pages.Account.LoginInfoModel
+@{
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>@User.Identity.Name</td>
+        </tr>
+        @foreach (var item in User.Claims)
+        {
+            <tr>
+                <td>@item.Type</td>
+                <td>@item.Value</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h1>Is Not Authenticated</h1>
+}
