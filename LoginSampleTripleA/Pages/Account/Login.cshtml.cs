@@ -17,10 +17,10 @@ namespace LoginSampleTripleA.Pages.Account
         public string UserName { get; set; }
 
         [BindProperty]
-        public string PassWord { get; set; }
+        public string Password { get; set; }
 
         [BindProperty]
-        public string ReturnUrl { get; set; }
+        public string? ReturnUrl { get; set; }
 
         public void OnGet()
         {
@@ -30,7 +30,7 @@ namespace LoginSampleTripleA.Pages.Account
         {
             if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(UserName, PassWord, false, false);
+                var result = await _signInManager.PasswordSignInAsync(UserName, Password, false, false);
                 if (result.Succeeded)
                 {
                     return Redirect(ReturnUrl ?? "/");
