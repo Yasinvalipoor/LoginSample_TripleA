@@ -41,6 +41,8 @@ app.MapRazorPages();
 
 app.UseAuthentication();
 
+app.UseAuthorization(); //Use After app.UseAuthentication();
+
 app.MapDefaultControllerRoute();
 
 
