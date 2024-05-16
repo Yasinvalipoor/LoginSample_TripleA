@@ -25,7 +25,13 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(c =>
 //.AddUserValidator<CustomUserValidator>(); // شخصی سازی ایمیل کاربری
 //.AddPasswordValidator<UserNamePasswordValidator>();// شخصی سازی پسوورد - 2  
 
-
+builder.Services.AddAuthorization(c =>
+{
+    c.AddPolicy("IsAdmin", pb =>
+    {
+        pb.RequireRole("Admin").RequireClaim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name", "Mohamad","Shayan");
+    });
+});
 
 var app = builder.Build();
 
